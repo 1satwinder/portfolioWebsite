@@ -36,6 +36,7 @@ export const Form = styled.form`
 export const Input = styled.input`
     padding: 1em; 
     width: 100%; 
+    outline: none;
 `; 
 
 export const Label = styled.label`
@@ -45,6 +46,8 @@ export const Label = styled.label`
 export const Textarea = styled.textarea`
     padding: 1em; 
     width: 100%; 
+    border: 2px solid black;
+    outline: none;
 `; 
 
 export const Title = ({ className, text }) => (

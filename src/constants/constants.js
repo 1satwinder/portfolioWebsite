@@ -9,8 +9,8 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Chat Application',
-    description:"A chat application where user can collaborate with each other by creating chat rooms. Users can send messages in the form of text and images. New users can create account by using sigup with google and facebook. users are authenticated using Firebase Authentication",
+    title: 'Real Time Chat Application',
+    description:"A real time chat application where user can collaborate with each other by creating chat rooms. Users can send messages in the form of text and images. New users can create account by using sigup with google and facebook. users are authenticated using Firebase Authentication",
     image: '/images/2.png',
     tags: ['Reactjs', 'Javascript', 'Firebase', 'React Chat API'],
     source: 'https://github.com/1satwinder/chat-Application',
