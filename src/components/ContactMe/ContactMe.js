@@ -13,51 +13,25 @@ const ContactMe = () => {
   const [email, setemail] = useState("");
   const [message, setmessage] = useState(""); 
 
-  const handleSubmit =  () => {
-    console.log('Sending')
-    let data = {
-      name,
-      email,
-      message
-    }
-    
-  fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      console.log('Response received')
-      if (res.status === 200) {
-        console.log('Response succeeded!')
-        setname('');
-        setemail('');
-        setmessage('');
-      }
-    }).catch( (e) => console.log("not sent") )
-  alert("Your response has been received! 👍")
-  }
-
   return (
     <Section nopadding id="contact-me">
       <SectionTitle main>Contact Me</SectionTitle>
-      <Form>
+      <Form name="contact" method="POST" data-netlify="true" >
         <WrapperGrid full>
+        <input type="hidden" name="form-name" value="contact" />
           <Label>Name</Label>
-          <Input type="text" value={name} onChange={ (e) => setname(e.target.value) } />
+          <Input type="text" name="name" value={name} onChange={ (e) => setname(e.target.value) } />
         </WrapperGrid>
         <WrapperGrid full>
           <Label>Email Address</Label>
-          <Input type="email" value={email} onChange={ (e) => setemail(e.target.value) }  />
+          <Input type="email" name="email" value={email} onChange={ (e) => setemail(e.target.value) }  />
         </WrapperGrid>
         <WrapperGrid full>
           <Label>Message</Label>
-          <Textarea name="message" rows="5" value={message} onChange={ (e) => setmessage(e.target.value) } ></Textarea>
+          <Textarea name="message" name="message" rows="5" value={message} onChange={ (e) => setmessage(e.target.value) } ></Textarea>
         </WrapperGrid>
         <WrapperGrid full>
-          <StyledButton onClick={() => handleSubmit()} type="button">Submit</StyledButton>
+          <StyledButton type="submit">Submit</StyledButton>
         </WrapperGrid>
       </Form>
     </Section>

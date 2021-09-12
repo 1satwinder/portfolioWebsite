@@ -27,7 +27,7 @@ export const Img = styled.img`
   margin-left: 15px;
   margin-top: 40px;
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 80%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     border-radius: 50%;

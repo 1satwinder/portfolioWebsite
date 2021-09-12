@@ -17,7 +17,7 @@ export const Section = styled.section`
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => props.nopadding ? "0" : "16px 16px 0" } ;
+    padding: ${(props) => props.nopadding ? "0" : "20px 16px 16px" } ;
 
     width: calc(100vw - 32px);
     flex-direction: column;
@@ -51,6 +51,7 @@ export const SectionTitle = styled.h2`
     margin-bottom: 8px;
     padding: ${(props) => props.main ? '16px 0 8px' : '0'};
     max-width: 100%;
+    margin-left: 20px;
   }
 `
 
@@ -77,7 +78,6 @@ export const SectionText = styled.p`
 `
 
 export const SectionDivider = styled.div`
-
   width: 64px;
   height: 6px;
   border-radius: 10px;
@@ -96,6 +96,7 @@ export const SectionDivider = styled.div`
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 32px;
     height: 2px;
+    margin-left: 20px;
   }
 `
 export const SectionSubText = styled.p`
